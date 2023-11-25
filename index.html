@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <header>
+        <div class="row">
+          <div class="col-12 home_page">
+            <div class="row align-items-center text light text-center"
+            style="min-height: 100vh;"> 
+              <form id="employeForm">
+                <h1 class="display-2 m-5">Dolgozói adatok kezelése</h1>
+                <div class="container">
+                  <input type="hidden" id="id">
+                  <table class="table table-hover table-dark">
+                    <tbody>
+                      <tr>
+                          <td><label for="name" class="form-label m-2"> Név: </label></td>
+                          <td><input type="text" name="name" id="nameInput" class="form-control-lg" required></td>
+                          <td> <label for="ageInput" class="form-label m-2">Életkor: </label></td>
+                          <td><input type="number" name="age" id="ageInput" class="form-control-lg" required></td>
+                      </tr>
+                      <tr>
+                        <td><label for="emailInput" class="form-label m-2"> E-mail: </label></td>
+                        <td><input type="email" name="email" id="emailInput" class="form-control-lg" required></td>
+                        <td><label for="phone_numberInput" class="form-label m-2">Telefonszám: </label></td>
+                        <td><input type="text" name="phone_number" id="phone_numberInput" class="form-control-lg" required></td>
+                      </tr>
+                      <tr>
+                        <td><label for="bossInput" class="form-label m-2">Főnök-e: </label></td>
+                        <td><input type="checkbox" name="boss" id="bossInput" class="form-control-lg"></td>
+                        <td><label for="star5" class="form-label m-2">Értékelés: </label></td>
+                        <td>
+                          <div class="rating">
+                            <input type="radio" id="star5" name="rating" value="5"><label for="star5"></label>
+                            <input type="radio" id="star4" name="rating" value="4"><label for="star4"></label>
+                            <input type="radio" id="star3" name="rating" value="3"><label for="star3"></label>
+                            <input type="radio" id="star2" name="rating" value="2"><label for="star2"></label>
+                            <input type="radio" id="star1" name="rating" value="1"><label for="star1"></label>
+                            </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><label for="classInput" class="form-label m-2">Részleg: </label></td>
+                        <td><input type="text" name="class" id="classInput" class="form-control-lg" required></td>
+                        <td><label for="starting_dateInput" class="form-label m-2">Munkába állás dátuma: </label></td>
+                        <td><input type="date" name="starting_date" id="starting_dateInput" class="form-control-lg" required></td>
+                      </tr>
+                      <tr>
+                        <td colspan="2"><button type="submit" class="btn btn-success" id="formSubmit" >Felvesz</button></td>
+                        <td colspan="2"><button type="submit" class="btn btn-danger" id="formChange">Mégse</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </form>        
+            </div>
+          </div>
+        </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="row" id="cardContainer">
+        </div>  
+      </div>
+    </main>
+
+    <script type="module" src="/main.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  </body>
+  <div class="divider"></div>
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <span class="mb-3 mb-md-0">© 2023 Garai Gábor 2/14.SL</span>
+      </div>
+    </footer>
+  </div>
+</html>

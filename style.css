@@ -1,0 +1,44 @@
+.rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    text-align: center;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 30px;
+    padding: 0 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.rating label:before {
+    content: '\2605';
+    color: #ddd;
+}
+
+.rating input:checked ~ label:before {
+    color: #f90;
+}
+
+header{
+    background-image: url(img_4jpg.jpg);
+    background-size: cover;
+    background-position: center; 
+    background-attachment: fixed; 
+    color: white; 
+    text-align: center; 
+    padding-top: 50px; 
+}
+
+body{
+    background-image: url(img_7jpg.jpg);
+    background-size: cover;
+    background-position: center; 
+    background-attachment: fixed; 
+    color: white; 
+    text-align: center; 
+}
